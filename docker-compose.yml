@@ -23,6 +23,8 @@ services:
   # Define a Chronograf service
   chronograf:
     image: chronograf:1.5.0
+    volumes:
+      - ./data/chronograf:/var/lib/chronograf
     environment:
       INFLUXDB_URL: http://influxdb:8086
       KAPACITOR_URL: http://kapacitor:9092
@@ -34,6 +36,8 @@ services:
   # Define a Kapacitor service
   kapacitor:
     image: kapacitor:1.4.1
+    volumes:
+      - ./data/kapacitor:/var/lib/kapacitor
     environment:
       KAPACITOR_HOSTNAME: kapacitor
       KAPACITOR_INFLUXDB_0_URLS_0: http://influxdb:8086
