@@ -1,13 +1,17 @@
 # Docker TICK Stack
 
+### Persistent Data:
+Clone this repo into a volume with ample space to support persistent data<br>
+for InfluxDB, Chronograf, and Kapacitor.
+
 ### To monitor localhost:
 Edit the ./etc/telegraf.conf file and add the hostname to 'hostname = ""',
-otherwise it will use the cotainer name which is not ideal.
+otherwise it will use the container name which is not ideal.
 
 ### To monitor additional hosts:
-Install Telegraf from https://docs.influxdata.com/telegraf/v1.9/introduction/installation/
-Copy ./etc/telegraf.conf to additional hosts(/etc/telegraf/telegraf.conf),
-edit the hostname and the inputs.procstat section, and start/enable telegraf.
+Install Telegraf from https://docs.influxdata.com/telegraf/v1.9/introduction/installation/<br>
+Copy ./etc/telegraf.conf to additional hosts(/etc/telegraf/telegraf.conf).<br>
+Edit the hostname and the inputs.procstat section, and start/enable telegraf.
 
 
 ### Deploy the TICK stack
