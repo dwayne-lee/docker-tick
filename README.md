@@ -10,7 +10,7 @@ otherwise it will use the container name which is not ideal.
 
 ### To monitor additional hosts:
 Install Telegraf from https://docs.influxdata.com/telegraf/v1.9/introduction/installation/<br>
-Copy ./etc/telegraf.conf to additional hosts(/etc/telegraf/telegraf.conf).<br>
+Copy ./telegraf.conf to additional hosts(/etc/telegraf/telegraf.conf).<br>
 Edit the hostname and the inputs.procstat section, and start/enable telegraf.
 
 
